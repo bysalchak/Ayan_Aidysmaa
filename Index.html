@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+
+  <title>Аян и Айдысмаа — 14.11.2026</title>
+
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- КОНВЕРТ -->
+  <div class="cover" id="cover">
+    <div class="cover-paper">
+
+      <div class="cover-top">
+        <p class="small-title">Приглашение на свадьбу</p>
+
+        <h1>
+          Аян <span>&</span><br>
+          Айдысмаа
+        </h1>
+
+        <p class="cover-date">14 ноября 2026</p>
+      </div>
+
+      <svg class="envelope-lines"
+           viewBox="0 0 420 150"
+           preserveAspectRatio="none"
+           aria-hidden="true">
+        <path d="M0 20
+                 C70 20 60 65 115 65
+                 C165 65 165 110 210 110
+                 C255 110 255 65 305 65
+                 C360 65 350 20 420 20"/>
+        <path d="M0 28
+                 C70 28 60 73 115 73
+                 C165 73 165 118 210 118
+                 C255 118 255 73 305 73
+                 C360 73 350 28 420 28"/>
+      </svg>
+
+      <button class="seal"
+              id="openEnvelope"
+              type="button"
+              aria-label="Открыть приглашение">
+        <span>А<span class="seal-and">&</span>А</span>
+      </button>
+
+      <div class="cover-bottom">
+        <p>Для самых<br><em>дорогих людей</em></p>
+
+        <button id="openButton"
+                class="open-button"
+                type="button">
+          Открыть приглашение ↗
+        </button>
+
+        <small>Нажмите на золотую печать</small>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- МУЗЫКА -->
+  <button id="musicButton"
+          class="music-button"
+          type="button"
+          hidden>
+    ♫ Пауза
+  </button>
+
+  <audio id="music" loop preload="none">
+    <source
+      src="https://dl.dropbox.com/scl/fi/9evqdw7wix590mxy03uq9/Ishkin_oglu_-_CHangys_salym_-SkySound.cc.mp3?rlkey=vla0zr8l11dhlkqns8548pp0b&st=yu3wlzct&dl=1"
+      type="audio/mpeg">
+  </audio>
+
+  <!-- ПРИГЛАШЕНИЕ -->
+  <main id="invitation" hidden>
+
+    <header class="hero">
+      <p class="small-title">Приглашение на свадьбу</p>
+
+      <h1>Аян <span>&</span> Айдысмаа</h1>
+
+      <div class="portrait">
+        <img
+          src="https://i.ibb.co/NdG25tWj/571A3227.jpg"
+          alt="Аян и Айдысмаа">
+      </div>
+
+      <p class="hero-date">14 · 11 · 2026</p>
+
+      <a href="#welcome"
+         class="down"
+         aria-label="Читать приглашение">↓</a>
+    </header>
+
+    <!-- БЕЗ ЗАКОРЮЧЕК -->
+    <section class="section welcome" id="welcome">
+      <h2>Дорогие родные и друзья!</h2>
+
+      <p class="intro">
+        Приглашаем вас разделить с нами радость
+        нашего свадебного дня.
+        Ваши улыбки, объятия и добрые пожелания
+        сделают этот праздник тёплым и незабываемым.
+      </p>
+
+      <p class="signature">
+        Будем счастливы видеть вас!
+      </p>
+    </section>
+
+    <!-- КАЛЕНДАРЬ НА ФОТО РУК -->
+    <section class="calendar-section" id="calendarSection">
+      <p class="small-title">Сохраните эту дату</p>
+      <h2>Наш день</h2>
+
+      <div class="calendar">
+        <p class="month">Ноябрь</p>
+        <p class="year">2026</p>
+
+        <div class="week">
+          <span>ПН</span>
+          <span>ВТ</span>
+          <span>СР</span>
+          <span>ЧТ</span>
+          <span>ПТ</span>
+          <span>СБ</span>
+          <span>ВС</span>
+        </div>
+
+        <div class="days" id="days"></div>
+      </div>
+
+      <p class="calendar-caption">
+        Наш особенный день — 14 ноября
+      </p>
+    </section>
+
+    <section class="section">
+      <p class="small-title" id="countTitle">
+        До начала торжества осталось
+      </p>
+
+      <div class="countdown">
+        <div><strong id="d">00</strong><small>дней</small></div>
+        <div><strong id="h">00</strong><small>часов</small></div>
+        <div><strong id="m">00</strong><small>минут</small></div>
+        <div><strong id="s">00</strong><small>секунд</small></div>
+      </div>
+    </section>
+
+    <section class="section program">
+      <p class="small-title">14 ноября 2026</p>
+      <h2>Программа дня</h2>
+
+      <div class="timeline">
+        <div><time>10:00</time><span>Выкуп невесты</span></div>
+        <div><time>12:00</time><span>Церемония Обмен клятвами</span></div>
+        <div><time>14:00</time><span>Фотосессия и прогулка</span></div>
+        <div><time>16:00</time><span>Сбор гостей</span></div>
+        <div><time>17:00</time><span>Начало торжества</span></div>
+      </div>
+    </section>
+
+    <section class="section venue">
+      <p class="small-title">Место проведения</p>
+      <h2>«Алдын-Сай»</h2>
+
+      <p>Банкетный зал</p>
+      <p>ул. Энергетиков, 7/1</p>
+
+      <a class="button"
+         href="https://yandex.ru/maps/?text=Алдын-Сай%20Энергетиков%207%2F1"
+         target="_blank"
+         rel="noopener noreferrer">
+        Посмотреть на карте ↗
+      </a>
+    </section>
+
+    <section class="section">
+      <p class="small-title">Вместе с нашей семьёй</p>
+      <h2>Ждём вас!</h2>
+
+      <p>
+        В этот особенный день нам хочется быть рядом
+        с самыми дорогими людьми.
+        Приходите разделить наше счастье!
+      </p>
+    </section>
+
+    <figure class="family-photo">
+      <img
+        src="https://i.ibb.co/Hp7t3sCr/571A3110.jpg"
+        alt="Семья Аяна и Айдысмаа"
+        loading="lazy">
+    </figure>
+
+    <section class="section">
+      <h2>Вы будете с нами?</h2>
+      <p>Будем рады получить ваш ответ.</p>
+
+      <form id="rsvpForm">
+        <label for="guestName">Ваши имя и фамилия</label>
+        <input id="guestName"
+               autocomplete="name"
+               maxlength="100"
+               required>
+
+        <label for="attendance">Сможете ли вы прийти?</label>
+        <select id="attendance" required>
+          <option value="">Выберите ответ</option>
+          <option value="yes">Да, приду / придём</option>
+          <option value="no">К сожалению, не смогу</option>
+          <option value="later">Сообщу чуть позже</option>
+        </select>
+
+        <label for="guestCount">
+          Количество гостей вместе с вами
+        </label>
+        <input id="guestCount"
+               type="number"
+               min="1"
+               max="30"
+               value="1"
+               required>
+
+        <button class="button" type="submit">
+          Подготовить ответ
+        </button>
+
+        <p id="formStatus" role="status"></p>
+
+        <a id="smsLink" class="button" hidden>
+          Открыть SMS с ответом ↗
+        </a>
+
+        <p class="form-hint">
+          Отправьте подготовленное сообщение
+          в приложении SMS.
+        </p>
+      </form>
+    </section>
+
+    <section class="section contacts">
+      <p class="small-title">Мы на связи</p>
+      <h2>Если остались вопросы</h2>
+
+      <a class="contact" href="tel:+79232635030">
+        <span>
+          <strong>Аян</strong>
+          <small>+7 923 263-50-30</small>
+        </span>
+        <span>Позвонить ↗</span>
+      </a>
+
+      <a class="contact" href="tel:+79230204444">
+        <span>
+          <strong>Айдысмаа</strong>
+          <small>+7 923 020-44-44</small>
+        </span>
+        <span>Позвонить ↗</span>
+      </a>
+    </section>
+
+    <footer>
+      <p>С любовью,</p>
+      <p class="signature">Аян & Айдысмаа</p>
+      <p class="small-title">14 · 11 · 2026</p>
+    </footer>
+
+  </main>
+
+</body>
+</html>
+<script>
+  /* Добавляем отсутствующий холст для салюта.
+     Этот блок выполняется до основного defer-скрипта. */
+  if (!document.getElementById("confetti")) {
+    const canvas = document.createElement("canvas");
+    canvas.id = "confetti";
+    canvas.setAttribute("aria-hidden", "true");
+    document.body.appendChild(canvas);
+  }
+
+  /* Исправляем отсутствующий заголовок,
+     к которому обращается основной скрипт. */
+  const invitationHeading =
+    document.querySelector("#invitation .hero h1");
+
+  if (invitationHeading) {
+    invitationHeading.id = "heroTitle";
+    invitationHeading.setAttribute("tabindex", "-1");
+  }
+</script>
