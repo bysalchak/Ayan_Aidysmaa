@@ -425,7 +425,7 @@ main {
   text-align: center;
   background:
     linear-gradient(#f9f7ed70, #f9f7ed65),
-    url("https://i.ibb.co/nsR9GGM9/571A3302.jpg")
+    url("./hands.jpg")
     center 51% / cover;
 }
 
@@ -1019,7 +1019,7 @@ body {
 }
 /* ТВОЙ ЦВЕТОЧНЫЙ ФОН */
 :root {
-  --floral: url("https://i.ibb.co/k2xJpR9N/16-ECC231-2303-4-AF9-9-E62-65-DCD2745-AEF.png");
+  --floral: url("./background.jpg");
 }
 
 /* Фон страницы */
